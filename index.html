@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="welcome-message">
+      <h2><i class="fa-solid fa-cloud-sun"></i> Weather App</h2>
+      <p>Input city name to view full dashboard</p>
+    </div>
+
+    <div class="dashboard-container">
+      <div class="sidebar">
+        <div class="top-section">
+          <div class="search">
+            <input type="text" placeholder="Search..." spellcheck="false" />
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <div class="error">
+            <p>City not found, please try again.</p>
+          </div>
+        </div>
+
+        <div class="weather-main">
+          <i class="weather-icon fa-solid fa-cloud"></i>
+
+          <h1 class="temp">--°c</h1>
+          <p class="feels-like">Feels like --°c</p>
+          <h2 class="city">--</h2>
+          <p class="desc">--</p>
+        </div>
+
+        <div class="bottom-info">
+          <div class="divider"></div>
+          <p class="local-time"></p>
+          <p class="date-info"></p>
+          <p class="data-source">Data provided by OpenWeatherMap</p>
+        </div>
+      </div>
+
+      <div class="content-panel">
+        <div class="map-section">
+          <iframe
+            id="gmap_canvas"
+            src=""
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
+        </div>
+
+        <div class="highlights">
+          <h3>Today's Highlights</h3>
+          <div class="cards-grid">
+            <div class="card-highlight">
+              <span class="card-title">Humidity</span>
+              <div class="card-value">
+                <span class="humidity">--%</span>
+                <i class="small-icon fa-solid fa-water"></i>
+              </div>
+            </div>
+
+            <div class="card-highlight">
+              <span class="card-title">Wind Status</span>
+              <div class="card-value">
+                <span class="wind">-- km/h</span>
+                <i class="small-icon fa-solid fa-wind"></i>
+              </div>
+            </div>
+
+            <div class="card-highlight">
+              <span class="card-title">Visibility</span>
+              <div class="card-value">
+                <span class="visibility">-- km</span>
+                <i class="small-icon fa-regular fa-eye"></i>
+              </div>
+            </div>
+
+            <div class="card-highlight">
+              <span class="card-title">Sunrise</span>
+              <div class="card-value">
+                <span class="sunrise">--:--</span>
+                <i class="small-icon fa-regular fa-sun"></i>
+              </div>
+            </div>
+
+            <div class="card-highlight">
+              <span class="card-title">Sunset</span>
+              <div class="card-value">
+                <span class="sunset">--:--</span>
+                <i class="small-icon fa-solid fa-moon"></i>
+              </div>
+            </div>
+
+            <div class="card-highlight">
+              <span class="card-title">Air Pressure</span>
+              <div class="card-value">
+                <span class="pressure">-- hPa</span>
+                <i class="small-icon fa-solid fa-gauge-high"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
