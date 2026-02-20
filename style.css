@@ -287,27 +287,51 @@ body {
   body {
     height: auto;
     overflow-y: auto;
+    flex-direction: column;
+    justify-content: flex-start;
   }
+
+  .welcome-message {
+    position: relative; 
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 100px 0 100px 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .welcome-message h2 {
+    font-size: 26px;
+  }
+
   .dashboard-container {
     height: auto;
     grid-template-columns: 1fr;
     padding: 20px;
     gap: 20px;
   }
+
+  .sidebar {
+    height: auto;
+  }
+
   .map-section {
     height: 250px;
     flex: none;
   }
+
   .cards-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .sidebar {
-    height: auto;
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
   }
-  .welcome-message {
-    position: static;
-    transform: none;
-    margin-top: 50px;
-    display: block;
+
+  .temp {
+    font-size: 48px;
   }
 }
